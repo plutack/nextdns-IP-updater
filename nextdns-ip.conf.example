@@ -1,0 +1,4 @@
+# Replace with your actual NextDNS URL
+NEXTDNS_IP="https://link-ip.nextdns.io/XXXXXX/YYYYYYYYYYYYYYYY"
+# Update interval (default 10m)
+UPDATE_INTERVAL="10m"

@@ -1,0 +1,28 @@
+[Unit]
+Description=NextDNS IP Updater Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/nextdns-ip
+EnvironmentFile=/etc/nextdns-ip.conf
+
+# Restart the service if it crashes
+
+Restart=always
+RestartSec=60
+
+# Run as a non-privileged user for security
+User=nobody
+Group=nogroup
+
+# Security hardening 
+ProtectSystem=full
+ProtectHome=yes
+NoNewPrivileges=yes
+
+# Adjust interval if needed (e.g., 5m, 1h, 30m)
+Environment="UPDATE_INTERVAL=10m"
+
+[Install]
+WantedBy=multi-user.target

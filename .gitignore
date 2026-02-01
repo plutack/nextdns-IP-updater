@@ -1,0 +1,15 @@
+# Binaries
+nextdns-ip
+main
+
+# Configuration with secrets
+nextdns-ip.conf
+
+# Arch Linux package build artifacts
+*.pkg.tar.zst
+*.pkg.tar.xz
+src/
+pkg/
+
+# OS specific
+.DS_Store
