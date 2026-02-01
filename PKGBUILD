@@ -22,5 +22,6 @@ package() {
     cd "$srcdir"
     install -Dm755 nextdns-ip "$pkgdir/usr/bin/nextdns-ip"
     install -Dm644 nextdns-ip.service "$pkgdir/usr/lib/systemd/system/nextdns-ip.service"
+    # Install the config as a system-wide fallback/example, but don't overwrite if existing
     install -Dm600 nextdns-ip.conf "$pkgdir/etc/nextdns-ip.conf"
 }

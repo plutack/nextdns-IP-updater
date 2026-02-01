@@ -5,11 +5,14 @@ Wants=network-online.target
 
 [Service]
 ExecStart=/usr/bin/nextdns-ip
-EnvironmentFile=/etc/nextdns-ip.conf
+
+# We leave EnvironmentFile as optional (-) so systemd doesn't fail if it's missing.
+# The binary itself will now look for ~/.config/nextdns-ip/config or /etc/nextdns-ip.conf
+EnvironmentFile=-/etc/nextdns-ip.conf
 
 # Restart the service if it crashes
-
 Restart=always
+
 RestartSec=60
 
 # Run as a non-privileged user for security
