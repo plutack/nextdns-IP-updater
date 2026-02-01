@@ -17,7 +17,8 @@ RestartSec=60
 
 # Run as a non-privileged user for security
 User=nobody
-Group=nogroup
+# On Arch Linux, 'nobody' is in the 'nobody' group, not 'nogroup'
+Group=nobody
 
 # Security hardening 
 ProtectSystem=full
