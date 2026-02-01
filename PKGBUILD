@@ -8,6 +8,7 @@ url="https://github.com/plutack/nextdns-ip"
 license=('MIT')
 depends=('glibc')
 makedepends=('go')
+options=('!debug')
 source=("main.go" "go.mod" "nextdns-ip.service" "nextdns-ip.conf")
 md5sums=('SKIP' 'SKIP' 'SKIP' 'SKIP')
 backup=('etc/nextdns-ip.conf')
